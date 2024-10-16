@@ -44,7 +44,6 @@ code {
 }
 
 
-
 .rounded-in-down {
   width: 93px;                  /* Width of the div */
   height: 84px;                 /* Height of the div */
@@ -68,4 +67,10 @@ code {
   border-radius: 5% 5% 0 0;    /* Rounded corners at the top */
   border-top: none;          /* Remove the bottom border */
   background: transparent;      /* Set background to transparent */
+}
+
+.white-text-shadow{
+  background: linear-gradient(to top, #FFFFFF, #535353 150%); 
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text;
 }

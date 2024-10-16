@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import nextLevelImage from './images/main-mobiles.png';
+import nextLevelImage from './images/main-mobiles.svg';
 import trustLogo from './images/trustvault.svg';
 import feature1 from './images/feature1.svg';
 import feature2 from './images/feature2.svg';
@@ -20,6 +20,11 @@ import telegram from './images/telegram.svg';
 import linkedin from './images/linkedin.svg';
 import email from './images/email.svg';
 import IOS from './images/IOS.svg';
+import android from './images/android.svg';
+import mac from './images/mac.svg';
+import chrome from './images/chrome.svg';
+import brave from './images/brave.svg';
+import edge from './images/edge.svg';
 import downloadApp from './images/download-app.svg';
 import blockchain1 from './images/blockchain1.svg';
 import blockchain2 from './images/blockchain2.svg';
@@ -32,7 +37,6 @@ import buttonBlur from './images/buttonBlur.svg';
 import downloadBtnBorder from './images/downloadBtnBorder.svg';
 import googlePlay from './images/googlePlay.svg';
 import apple from './images/apple.svg';
-import downloadblackShadow from './images/download-app-shadow.svg';
 import zigBg from './images/zig-bg.svg'
 import linearLine from './images/linear-line.svg'
 import letsTalk from './images/letsTalk-shadow.svg'
@@ -42,6 +46,8 @@ import footerLinkedIn from './images/footerLinkedIn.svg'
 import footerMedium from './images/footerMedium.svg'
 import footerFacebook from './images/footerFacebook.svg'
 import footerGithub from './images/footerGithub.svg'
+import benefitShadow from './images/benefit-shadow.svg'
+import downloadAppShadow from './images/download-app-shadow.svg'
 
 
 
@@ -56,13 +62,13 @@ function App() {
     <div className="min-h-screen flex flex-col items-center justify-center">
       <Header />
       {/* Hero Section */}
-      <section className="w-full bg-main-bg min-h-screen bg-cover bg-no-repeat">
+      <section className="w-full bg-main-bg min-h-screen bg-contain bg-no-repeat">
         <section className="w-full bg-next-level bg-contain bg-no-repeat w-2/4 -mt-15 font-bold text-white py-14 text-center flex flex-col items-center justify-center">
           <div className='main-heading-container relative mb-7'>
             <h1 className="text-8xl font-bold"><span>next</span><span className='text-lime-400'>level</span></h1>
             <p className="text-neutral-200 text-lg text-xl font-light">advanced self custody technology</p>
           </div>
-          <img src={nextLevelImage}></img>
+          <img src={nextLevelImage} style={{ width: '42%' }}></img>
         </section>
 
 
@@ -71,7 +77,7 @@ function App() {
 
         {/* Features Section */}
         <section className="w-full px-4 text-gray-800 mb-16">
-          <h1 className='text-center text-4xl font-extrabold text-white mt-4 mb-16'>Key Features</h1>
+          <h1 className='text-center text-4xl font-extrabold white-text-shadow mt-4 mb-16'>Key Features</h1>
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
 
             {/* First Card */}
@@ -124,20 +130,20 @@ function App() {
         </div>
       </section>
 
-      <section className="w-full py-16 mb-14 mt-16 px-4 text-gray-800 bg-full-screen-shadow bg-contain bg-no-repeat" style={{ backgroundPosition: '105% 65%', backgroundSize: '40%' }}>
+      <section className="w-full py-16 mb-14 mt-16 px-4 bg-full-screen-shadow bg-contain bg-no-repeat" style={{ backgroundPosition: '105% 65%', backgroundSize: '40%' }}>
         <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-white">
           <div className="mb-8 md:mb-0 md:w-1/3"> {/* Adjusted width for the image div */}
             <img src={whatis} alt="What is SAFESEND?" className="w-3/4 h-auto mx-auto" /> {/* Made the image smaller */}
           </div>
           <div className="md:w-2/3"> {/* Adjusted width for the text div */}
-            <p className="text-3xl md:text-4xl font-extrabold">What is SAFESEND?</p>
-            <p className="text-base font-medium mt-4">
+            <p className="text-3xl md:text-4xl font-extrabold white-text-shadow">What is SAFESEND?</p>
+            <p className="text-base font-medium mt-4 ">
               Experience a new level of security with SafeSend! Before sending large amounts, SafeSend kicks off the process with a transfer, verified by the recipient through a one-time password (OTP). This smart feature ensures your funds land exactly where you want them, eliminating the risk of crypto clipping or sending to the wrong address. Once stage 1 of the transfer is confirmed, the full amount is released with confidence. Say goodbye to transaction anxiety and hello to seamless, secure transfers with SafeSend!
             </p>
 
             <div className='relative'>
               <img src={buttonBlur} className='absolute -bottom-5 left-5'></img>
-              <button className="relative z-index-10 bg-gradient-to-t from-neutral-950 to-zinc-900 border-2 border-indigo-500 text-white py-3 px-7 rounded-full hover:bg-blue-600 transition mt-6">
+              <button className="relative z-index-10 bg-gradient-to-t from-neutral-950 to-gray-800 border-2 border-indigo-500 text-white py-3 px-7 rounded-full hover:bg-blue-600 transition mt-6">
                 Read More
               </button>
             </div>
@@ -160,7 +166,8 @@ function App() {
 
         {/* Main Content Div */}
         <div
-          className="max-w-7xl mx-auto bg-gray-800 flex flex-col md:flex-row justify-evenly md:space-x-8 space-y-6 md:space-y-0 rounded-lg relative z-10 p-6 md:p-8" // Added padding for smaller screens
+            className="max-w-7xl mx-auto bg-gray-800 flex flex-col items-center md:flex-row justify-evenly md:space-x-8 space-y-6 md:space-y-0 rounded-3xl relative z-10 p-6 md:p-8" // No padding-bottom specified
+            // Added padding for smaller screens
           style={{
             background: "linear-gradient(to top, #121318, #1B1E23)",
             borderTop: "1px solid white",
@@ -169,46 +176,52 @@ function App() {
             borderBottom: "none",
           }}
         >
-          <div className="flex flex-col items-center text-white">
-            <h3 className="text-3xl font-semibold mt-4 mb-4 text-center">Download Our App</h3>
+      <div className="flex flex-col items-center text-white">
+  <h3 className="text-3xl font-extrabold mb-8 text-center white-text-shadow">Download Our App</h3>
 
-            {/* Two buttons with consistent height and padding */}
-            <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 gap-4 md:gap-2 w-full">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
-                {/* Google Play Button */}
-                <div className='bg-gradient-to-t from-neutral-950 to-gray-800 flex items-center justify-center gap-4 border-2 border-indigo-500 px-6 py-3 rounded-full w-full md:w-auto'>
-                  <div>
-                    <img src={googlePlay} alt='google-play' className="w-8" />
-                  </div>
-                  <div className="text-center">
-                    <p className='text-sm'>GET IT ON</p>
-                    <h3 className='text-lg'>Google Play</h3>
-                  </div>
-                </div>
+  {/* Two buttons with consistent height and padding */}
+  <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 gap-4 md:gap-2 w-full">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
+      
+      {/* Google Play Button */}
+      <div className='bg-gradient-to-t from-neutral-950 to-gray-800 flex items-center justify-center gap-4 border-2 border-indigo-500 px-8 py-3 rounded-3xl w-full md:w-auto'>
+        <div>
+          <img src={googlePlay} alt='google-play' className="w-8" />
+        </div>
+        <div className="text-left">
+          <p className='text-sm '>GET IT ON</p>
+          <h3 className='text-lg font-semibold'>Google Play</h3>
+        </div>
+      </div>
 
-                {/* Apple Store Button */}
-                <div className='bg-gradient-to-t from-neutral-950 to-gray-800 flex items-center justify-center gap-4 border-2 border-indigo-500 px-6 py-3 rounded-full w-full md:w-auto'>
-                  <div>
-                    <img src={apple} alt='apple' className="w-8" />
-                  </div>
-                  <div className="text-center">
-                    <p className='text-sm'>Download on the</p>
-                    <h3 className='text-lg'>App Store</h3>
-                  </div>
-                </div>
-              </div>
+      {/* Apple Store Button */}
+      <div className='bg-gradient-to-t from-neutral-950 to-gray-800 flex items-center justify-center gap-4 border-2 border-indigo-500 px-8 py-3 rounded-3xl w-full md:w-auto'>
+        <div>
+          <img src={apple} alt='apple' className="w-8" />
+        </div>
+        <div className="text-left">
+          <p className='text-sm'>Download on the</p>
+          <h3 className='text-lg font-semibold'>App Store</h3>
+        </div>
+      </div>
 
-            </div>
-          </div>
+    </div>
+  </div>
+  
+</div>
+
           <div className="flex items-center justify-center">
             <div className="relative">
               <img src={downloadApp} className="mt-4 md:mt-[-150px] transition-all duration-300" alt="Download App" />
             </div>
           </div>
+            {/* Shadow Image */}
+          <img src={downloadAppShadow} className='absolute -bottom-8 right-0' alt="Download App Shadow" />
+
         </div>
 
         {/* Black bottom shadow */}
-        <div></div>
+
       </section>
 
 
@@ -267,7 +280,7 @@ function App() {
 
 
       <section className="w-full py-16 px-4  bg-full-screen-shadow bg-no-repeat" style={{ backgroundPosition: '150% 80%', backgroundSize: '60%' }}>
-        <h1 className='text-5xl text-white mb-6 text-center'>Benefits</h1>
+        <h1 className='text-5xl white-text-shadow mb-10 text-center font-extrabold'>Benefits</h1>
         <div className="max-w-6xl mx-auto bg-gradient-to-t from-neutral-950 to-zinc-900 border border-white border-b-0 rounded-3xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 py-12 text-white justify-items-center">
 
@@ -282,7 +295,8 @@ function App() {
             {/* Middle Card with Background Image */}
             <div className="flex flex-col items-center text-center relative min-h-64 h-full px-4">
               {/* Background Image Placeholder */}
-              <div className="absolute inset-0 bg-benefit-shadow bg-cover bg-no-repeat" style={{ left: '20%', top: '0%' }}></div>
+              <div className="relative"></div>
+              <img src={benefitShadow} className='absolute -top-20'></img>
               <img src={benefit2} alt="Feature 2" className="mb-7 z-10" />
               <h2 className="text-xl font-semibold mb-2 z-10">Collaborative Management</h2>
               <h4 className="text-base font-light mb-5 z-10 w-full sm:w-48 mx-auto">Manage crypto with others, securely</h4>
@@ -306,7 +320,7 @@ function App() {
 
         <section className="w-full mt-16 bg-full-screen-shadow bg-no-repeat" style={{ backgroundPosition: '-65% -60%', backgroundSize: '75%' }}>
           <div className="max-w-6xl mx-auto text-white">
-            <h2 className="text-center text-4xl font-bold mb-8">How it Works</h2>
+            <h2 className="text-center text-4xl font-extrabold mb-8 white-text-shadow">How it Works</h2>
             <div className="flex flex-col md:flex-row justify-evenly md:space-x-8 space-y-6 md:space-y-0">
 
               {/* First Card */}
@@ -338,7 +352,7 @@ function App() {
           {/* Future of Crypto Management */}
           <section className="w-full py-2 mt-6">
             <div className="max-w-6xl mx-auto text-white text-center">
-              <h1 className="text-5xl mb-4 font-extrabold">The Future of Secure Crypto Management</h1>
+              <h1 className="text-5xl mb-4 font-extrabold white-text-shadow">The Future of Secure Crypto Management</h1>
               <h3 className="text-3xl mb-3">Key Features that Empower Your Crypto Journey</h3>
               <p className="text-medium font-light text-stone-300 mb-12 w-2/3 mx-auto">
                 Unveil the cutting-edge features of our multisig wallet, crafted to provide top-notch security and control over your digital assets. Here are the six main features that set our wallet apart in the industry.
@@ -480,9 +494,10 @@ function App() {
 
                     <div className='relative'>
                       <img src={buttonBlur} className='absolute -bottom-5 left-5'></img>
-                      <button className="relative z-index-10 bg-gradient-to-t from-neutral-950 to-zinc-900 border-2 border-indigo-500 text-white py-3 px-7 rounded-full hover:bg-blue-600 transition mt-2">
+                      <button className="relative z-index-10 bg-gradient-to-t from-neutral-950 to-gray-800 border-2 border-indigo-500 text-white py-3 px-7 rounded-full hover:bg-blue-600 transition mt-2">
                         Learn More
                       </button>
+                      
                     </div>                </div>
                   <img src={whychoose1} alt="First Image" className="w-full md:w-1/2 rounded-lg" />
                 </div>
@@ -495,7 +510,7 @@ function App() {
                       With our wallet, you maintain full control over your assets. The ability to customize the number of required signers gives you the flexibility to tailor security to your specific needs, whether you're managing personal funds, corporate assets, or a joint account.                    </p>
                     <div className='relative'>
                       <img src={buttonBlur} className='absolute -bottom-5 left-5'></img>
-                      <button className="relative z-index-10 bg-gradient-to-t from-neutral-950 to-zinc-900 border-2 border-indigo-500 text-white py-3 px-7 rounded-full hover:bg-blue-600 transition mt-2">
+                      <button className="relative z-index-10 bg-gradient-to-t from-neutral-950 to-gray-800 to-zinc-900 border-2 border-indigo-500 text-white py-3 px-7 rounded-full hover:bg-blue-600 transition mt-2">
                         Learn More
                       </button>
                     </div>
@@ -523,7 +538,7 @@ function App() {
 
             <div className="flex flex-col md:flex-row items-center md:space-x-4 py-16 rounded-lg sm:gap-10"> {/* Adjust gap on smaller screens */}
               <div className="flex-1">
-                <h2 className="text-4xl font-extrabold mb-6">Download our free safety guide</h2>
+                <h2 className="text-4xl font-extrabold mb-6 white-text-shadow">Download our free safety guide</h2>
                 <h3 className="text-xl font-bold mb-2">Protect Your Digital Assets with Confidence</h3>
                 <p className="font-light mb-4">
                   Get instant access to our comprehensive Safety Guide and learn essential tips for securing your online presence. From password management to avoiding scams, this guide provides actionable advice to help you stay safe in the digital world. Don't leave your security to chance—download your free copy today!
@@ -531,7 +546,7 @@ function App() {
 
                 <div className="relative">
                   <img src={buttonBlur} className="absolute -bottom-4 left-24"></img>
-                  <button className="relative z-10 bg-gradient-to-t from-neutral-950 to-zinc-900 border-2 border-indigo-500 text-white py-3 px-12 rounded-full hover:bg-blue-600 transition mt-2">
+                  <button className="relative z-10 bg-gradient-to-t from-neutral-950 to-gray-800 border-2 border-indigo-500 text-white py-3 px-12 rounded-full hover:bg-blue-600 transition mt-2">
                     Download Guide
                   </button>
                 </div>
@@ -713,7 +728,7 @@ function App() {
 
               {/* Border and Inner Content */}
               <div className="py-8 relative z-10">
-                <h2 className="text-5xl font-extrabold text-white">Let's Talk</h2>
+                <h2 className="text-5xl font-extrabold white-text-shadow">Let's Talk</h2>
                 <p className='text-stone-300 text-xl mt-4 mb-8'>Begin your journey into the tomorrow of fintech today.</p>
               </div>
 
@@ -763,7 +778,7 @@ function App() {
             <div className="flex flex-col md:flex-row items-start justify-between">
               {/* Left Side: Heading and Paragraph */}
               <div className="md:w-1/3 mb-8 md:mb-0">
-                <h2 className="text-4xl font-bold mb-4 text-white text-left">Platform Support</h2>
+                <h2 className="text-4xl font-extrabold mb-4 white-text-shadow text-left">Platform Support</h2>
                 <p className="text-stone-300 text-left">
                   Our wallet is available on iOS, Android, and
                   Desktop, and supports all major coins and tokens.</p>
@@ -774,42 +789,42 @@ function App() {
                 {/* Card 1 */}
                 <div className="relative bg-gradient-to-t from-neutral-950 to-zinc-900 rounded-lg shadow p-4 w-24 flex flex-col items-center mb-4"> {/* Adjust width */}
                   <div className='rounded-in-up absolute top-0'></div>
-                  <img src={IOS} alt="Logo" className="mb-2 z-10" />
+                  <img src={IOS} alt="Logo" className="mb-2 z-10 w-12" />
                 </div>
 
                 {/* Card 2 */}
                 <div className="relative bg-gradient-to-t from-neutral-950 to-zinc-900 rounded-lg shadow p-4 w-24 flex flex-col items-center mb-4"> {/* Adjust width */}
                   <div className='rounded-in-down absolute top-0'></div>
 
-                  <img src={IOS} alt="Logo" className="mb-2 z-10" />
+                  <img src={android} alt="Logo" className="mb-2 z-10 w-12" />
                 </div>
 
                 {/* Card 3 */}
                 <div className="relative bg-gradient-to-t from-neutral-950 to-zinc-900 rounded-lg shadow p-4 w-24 flex flex-col items-center mb-4"> {/* Adjust width */}
                   <div className='rounded-in-up absolute top-0'></div>
 
-                  <img src={IOS} alt="Logo" className="mb-2 z-10" />
+                  <img src={mac} alt="Logo" className="mb-2 z-10 w-12" />
                 </div>
 
                 {/* Card 4 */}
                 <div className="relative bg-gradient-to-t from-neutral-950 to-zinc-900 rounded-lg shadow p-4 w-24 flex flex-col items-center mb-4"> {/* Adjust width */}
                   <div className='rounded-in-down absolute top-0'></div>
 
-                  <img src={IOS} alt="Logo" className="mb-2 z-10" />
+                  <img src={chrome} alt="Logo" className="mb-2 z-10 w-12" />
                 </div>
 
                 {/* Card 5 */}
                 <div className="relative bg-gradient-to-t from-neutral-950 to-zinc-900 rounded-lg shadow p-4 w-24 flex flex-col items-center mb-4"> {/* Adjust width */}
                   <div className='rounded-in-up absolute top-0'></div>
 
-                  <img src={IOS} alt="Logo" className="mb-2 z-10" />
+                  <img src={brave} alt="Logo" className="mb-2 z-10 w-12" />
                 </div>
 
                 {/* Card 6 */}
                 <div className="relative bg-gradient-to-t from-neutral-950 to-zinc-900 rounded-lg shadow p-4 w-24 flex flex-col items-center mb-4"> {/* Adjust width */}
                   <div className='rounded-in-down absolute top-0'></div>
 
-                  <img src={IOS} alt="Logo" className="mb-2 z-10" />
+                  <img src={edge} alt="Logo" className="mb-2 z-10 w-12" />
                 </div>
               </div>
 
@@ -897,6 +912,7 @@ function App() {
       <img src={footerGithub} alt="Github" />
       <li className="mb-2">Github</li>
     </div>
+
   </ul>
 </div>
 
@@ -904,8 +920,8 @@ function App() {
           </footer>
 
         </div>
-      </section>
 
+      </section>
 
     </div>
 

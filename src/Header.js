@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import trustLogo from './images/trustvault.svg';
-import downloadBtnBorder from './images/downloadBtnBorder.svg'; 
+import roundedDownload from './images/roundedDownload.svg';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,10 +21,23 @@ export default function Header() {
           <li className="hover:text-gray-300">Blog</li>
         </ul>
         <div className="flex gap-x-4 relative">
-          <img src={downloadBtnBorder} className="absolute top-2 right-0 hidden lg:block" alt="Download Button Border" />
-          <button className="border-2 border-zinc-900 rounded-3xl px-4 py-2 lg:px-8 lg:py-3">Download</button>
-        </div>
-        <button className="ml-4 text-white hover:text-gray-300">Get in touch</button>
+  <button className="relative rounded-3xl px-4 py-2 lg:px-8 lg:py-3 border-2 border-gray-500">
+    Download
+    {/* <img src={roundedDownload} className='absolute bottom-2 right-2 w-6 h-6' alt="Download" /> */}
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        <button className="text-white hover:text-gray-300 rounded-3xl px-4 py-2 lg:px-8 lg:py-3 border-2 border-indigo-500">Get in touch</button>
       </div>
 
       {/* Hamburger Menu for Mobile */}
@@ -47,7 +60,7 @@ export default function Header() {
             <li className="hover:text-gray-300">Blog</li>
           </ul>
           <button className="border-2 border-zinc-900 rounded-3xl px-8 py-3">Download</button>
-          <button className="text-white hover:text-gray-300 mt-4">Get in touch</button>
+         <button className="text-white hover:text-gray-300 mt-4">Get in touch</button>
         </div>
       )}
     </header>
